@@ -20,7 +20,6 @@ function InstagramIcon() {
   );
 }
 
-// Bold banner inviting visitors to follow the 300-day coding journey.
 export default function Journey() {
   return (
     <section aria-label="Coding journey" className="px-4 pb-20 sm:px-6 sm:pb-28">

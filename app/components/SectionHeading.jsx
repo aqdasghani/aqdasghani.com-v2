@@ -1,4 +1,3 @@
-// Shared section heading: eyebrow chip + title + optional description.
 export default function SectionHeading({
   eyebrow,
   title,

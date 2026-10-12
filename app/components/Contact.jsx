@@ -4,7 +4,6 @@ import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
 import { SITE } from "../data";
 
-// Contact details live in data.js — cards are derived here so nothing is duplicated.
 const CONTACT_CARDS = [
   {
     label: "Email",

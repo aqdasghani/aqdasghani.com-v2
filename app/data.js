@@ -1,4 +1,3 @@
-// Central content for the site — edit text here and it updates everywhere.
 export const SITE = {
   name: "Aqdas Ghani",
   role: "Full-Stack Developer",
@@ -12,7 +11,6 @@ export const SITE = {
   formspree: "https://formspree.io/f/xqabwnva",
 };
 
-// Hackathons Aqdas has built at: EDM 3.0 (offline, Dehradun) + one online build.
 export const HACKATHONS = 2;
 
 export const NAV_LINKS = [  { label: "Home", href: "#home" },
@@ -23,8 +21,6 @@ export const NAV_LINKS = [  { label: "Home", href: "#home" },
 ];
 
 export const PROJECTS = [
-  // `live` = deployed URL shown as a "Live demo" button. Add one here
-  // whenever a project gets deployed; leave as null if not deployed yet.
   {
     title: "HEIC Image Converter",
     description:

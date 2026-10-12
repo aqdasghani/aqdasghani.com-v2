@@ -7,7 +7,6 @@ import Journey from "./components/Journey";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-// Single-page portfolio: each section is its own component.
 export default function Home() {
   return (
     <>

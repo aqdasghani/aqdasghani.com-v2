@@ -1,7 +1,5 @@
 import { NAV_LINKS } from "../data";
 
-// Fixed at build time — Next.js 16 prerendering rejects `new Date()` here.
-// Bump this each January.
 const YEAR = 2026;
 
 export default function Footer() {

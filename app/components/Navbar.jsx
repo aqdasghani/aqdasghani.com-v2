@@ -5,7 +5,6 @@ import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
 import { NAV_LINKS, SITE } from "../data";
 
-// Sticky navbar with blur backdrop + mobile menu. Only interactive island on the page besides the form.
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -21,7 +20,6 @@ export default function Navbar() {
             Aqdas<span className="text-gradient-animated">.</span>
           </a>
 
-          {/* Desktop links */}
           <ul className="hidden items-center gap-1 md:flex">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
@@ -42,7 +40,6 @@ export default function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile toggle */}
           <div className="flex items-center gap-1 md:hidden">
             <ThemeToggle />
             <button
@@ -73,7 +70,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div
             id="mobile-menu"

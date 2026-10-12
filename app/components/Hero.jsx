@@ -5,7 +5,6 @@ import Button from "./Button";
 import { SITE, PROJECTS, HACKATHONS } from "../data";
 import heroPhoto from "../../public/aqdas.jpg";
 
-// Real numbers derived from data.js — update the data, the stats follow.
 const TECH_COUNT = new Set(PROJECTS.flatMap((p) => p.tags)).size;
 const STATS = [
   [`${PROJECTS.length}+`, "Projects shipped"],
@@ -33,7 +32,6 @@ export default function Hero() {
       aria-label="Introduction"
       className="relative overflow-hidden pb-20 pt-36 sm:pb-28 sm:pt-44"
     >
-      {/* Floating gradient blobs — pure CSS motion */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="animate-float absolute -left-24 -top-24 h-96 w-96 rounded-full bg-coral/25 blur-2xl sm:blur-3xl" />
         <div className="animate-float-slow absolute -right-24 top-32 h-[28rem] w-[28rem] rounded-full bg-violet/25 blur-2xl sm:blur-3xl" />

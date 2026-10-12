@@ -3,7 +3,6 @@ import Section from "./Section";
 import SectionHeading from "./SectionHeading";
 import { SITE, PROJECTS } from "../data";
 
-// Static classes per accent so Tailwind can compile them.
 const ACCENTS = {
   coral: { bar: "from-coral to-amber", tint: "bg-blush", dot: "bg-coral" },
   violet: { bar: "from-violet to-coral", tint: "bg-lilac", dot: "bg-violet" },

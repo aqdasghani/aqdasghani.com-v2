@@ -3,10 +3,8 @@
 import { useState } from "react";
 import { SITE } from "../data";
 
-// Contact form — submits to the existing Formspree endpoint via fetch,
-// so the page never reloads and the user gets instant feedback.
 export default function ContactForm() {
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState("idle");
 
   async function handleSubmit(event) {
     event.preventDefault();

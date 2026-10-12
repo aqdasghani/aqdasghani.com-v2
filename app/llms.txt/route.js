@@ -1,6 +1,5 @@
 import { SITE, PROJECTS, SERVICES, HACKATHONS } from "../data";
 
-// Plain-text site summary for AI agents and crawlers (llms.txt convention).
 const lines = [
   `# ${SITE.name}`,
   "",

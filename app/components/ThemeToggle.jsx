@@ -2,8 +2,6 @@
 
 import { useTheme } from "./ThemeProvider";
 
-// Sun/moon toggle. Renders a neutral placeholder on the server so the
-// initial HTML matches before the theme is known client-side.
 export default function ThemeToggle({ className = "" }) {
   const { theme, toggle } = useTheme();
   const isDark = theme === "dark";

@@ -1,22 +1,20 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useState } from "react";
 
 const ThemeContext = createContext({ theme: "light", toggle: () => {} });
 
-// Inline script injected in <head> (see layout): sets the `dark` class on
-// <html> before first paint, so there is no light-mode flash.
 export const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('aqdas-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`;
 
-export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+function currentTheme() {
+  if (typeof document === "undefined") return "light";
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
 
-  useEffect(() => {
-    // Intentional: the inline head script sets the class pre-paint; this just
-    // syncs React state afterwards so server and client render identically.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setTheme(document.documentElement.classList.contains("dark") ? "dark" : "light");
-  }, []);
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState(currentTheme);
+  const actual = currentTheme();
+  if (actual !== theme) setTheme(actual);
 
   const toggle = useCallback(() => {
     setTheme((prev) => {
@@ -24,8 +22,8 @@ export function ThemeProvider({ children }) {
       document.documentElement.classList.toggle("dark", next === "dark");
       try {
         localStorage.setItem("aqdas-theme", next);
-      } catch {
-        /* private mode — theme just won't persist */
+      } catch (e) {
+        void e;
       }
       return next;
     });

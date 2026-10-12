@@ -1,4 +1,3 @@
-// Shared page section shell: consistent spacing, container and anchor offset.
 export default function Section({
   id,
   label,

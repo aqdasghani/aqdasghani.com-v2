@@ -2,8 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-// Fades content up into view the first time it enters the viewport.
-// Pure IntersectionObserver + CSS classes — no animation libraries.
 export default function Reveal({ children, className = "", delay = 0 }) {
   const ref = useRef(null);
 

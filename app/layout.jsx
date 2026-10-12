@@ -3,7 +3,6 @@ import "./globals.css";
 import { SITE } from "./data";
 import { ThemeProvider, THEME_INIT_SCRIPT } from "./components/ThemeProvider";
 
-// Body copy relies on the default 400 weight — all three are needed.
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -71,7 +70,6 @@ export const metadata = {
   category: "technology",
 };
 
-// Structured data: helps search engines understand who the site is about.
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -104,7 +102,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta.variable} h-full antialiased`} suppressHydrationWarning>
-      {/* theme script below sets the dark class before hydration */}
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
