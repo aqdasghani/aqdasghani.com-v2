@@ -20,13 +20,13 @@ export default function Experience() {
         />
       </Reveal>
       <Reveal delay={120}>
-        <div className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#3b1d7a] via-[#6d28d9] to-[#9333ea] p-8 shadow-2xl shadow-violet-300 sm:p-14">
+        <div className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#3b1d7a] via-[#6d28d9] to-[#9333ea] p-8 shadow-2xl shadow-violet-300 sm:p-14 dark:shadow-black/50">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
           >
-            <div className="animate-float absolute -right-16 -top-16 h-64 w-64 rounded-full bg-amber/30 blur-3xl" />
-            <div className="animate-float-slow absolute -bottom-20 -left-10 h-72 w-72 rounded-full bg-coral/30 blur-3xl" />
+            <div className="animate-float absolute -right-16 -top-16 h-64 w-64 rounded-full bg-amber/30 blur-2xl sm:blur-3xl" />
+            <div className="animate-float-slow absolute -bottom-20 -left-10 h-72 w-72 rounded-full bg-coral/30 blur-2xl sm:blur-3xl" />
           </div>
           <div className="relative grid items-center gap-10 lg:grid-cols-[auto_1fr]">
             <div className="text-center lg:text-left">

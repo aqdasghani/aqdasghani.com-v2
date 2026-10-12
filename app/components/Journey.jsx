@@ -30,8 +30,8 @@ export default function Journey() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
           >
-            <div className="animate-float absolute -left-16 -top-16 h-64 w-64 rounded-full bg-coral/25 blur-3xl" />
-            <div className="animate-float-slow absolute -bottom-20 -right-10 h-72 w-72 rounded-full bg-amber/25 blur-3xl" />
+            <div className="animate-float absolute -left-16 -top-16 h-64 w-64 rounded-full bg-coral/25 blur-2xl sm:blur-3xl" />
+            <div className="animate-float-slow absolute -bottom-20 -right-10 h-72 w-72 rounded-full bg-amber/25 blur-2xl sm:blur-3xl" />
           </div>
           <div className="relative">
             <p className="text-5xl" aria-hidden="true">

@@ -96,7 +96,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-coral-deep via-violet-deep to-violet px-8 py-4 text-base font-bold text-white shadow-lg shadow-violet-300/50 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl disabled:cursor-wait disabled:opacity-70"
+            className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-coral-deep via-violet-deep to-violet px-8 py-4 text-base font-bold text-white shadow-lg shadow-violet-300/50 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl disabled:cursor-wait disabled:opacity-70 dark:shadow-violet-500/25"
           >
             {status === "sending" ? "Sending…" : "Send message →"}
           </button>

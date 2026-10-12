@@ -1,7 +1,7 @@
 // Shared CTA link styled as a button. Two variants: gradient (primary) and outline (secondary).
 const VARIANTS = {
   primary:
-    "bg-gradient-to-r from-[#cf3a2c] via-[#6d28d9] to-[#6d28d9] text-white shadow-lg shadow-violet-300/50 hover:shadow-xl",
+    "bg-gradient-to-r from-[#cf3a2c] via-[#6d28d9] to-[#6d28d9] text-white shadow-lg shadow-violet-300/50 hover:shadow-xl dark:shadow-violet-500/25",
   instagram:
     "bg-gradient-to-r from-[#cf3a2c] via-[#c026d3] to-[#6d28d9] text-white shadow-lg hover:shadow-xl",
   secondary:

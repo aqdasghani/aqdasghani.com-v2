@@ -35,10 +35,10 @@ export default function Hero() {
     >
       {/* Floating gradient blobs — pure CSS motion */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="animate-float absolute -left-24 -top-24 h-96 w-96 rounded-full bg-coral/25 blur-3xl" />
-        <div className="animate-float-slow absolute -right-24 top-32 h-[28rem] w-[28rem] rounded-full bg-violet/25 blur-3xl" />
+        <div className="animate-float absolute -left-24 -top-24 h-96 w-96 rounded-full bg-coral/25 blur-2xl sm:blur-3xl" />
+        <div className="animate-float-slow absolute -right-24 top-32 h-[28rem] w-[28rem] rounded-full bg-violet/25 blur-2xl sm:blur-3xl" />
         <div
-          className="animate-float absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-amber/25 blur-3xl"
+          className="animate-float absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-amber/25 blur-2xl sm:blur-3xl"
           style={{ animationDelay: "-4s" }}
         />
       </div>
@@ -120,12 +120,12 @@ export default function Hero() {
               />
             </div>
             <FloatingBadge
-              className="-left-8 top-10 shadow-violet-100 sm:-left-12"
+              className="-left-8 top-10 sm:-left-12"
               title="⚡ Lightning-fast"
               subtitle="SEO-friendly builds"
             />
             <FloatingBadge
-              className="-right-6 bottom-12 shadow-coral-100 sm:-right-10"
+              className="-right-6 bottom-12 sm:-right-10"
               style={{ animationDelay: "-4.5s" }}
               title="💛 Client-first"
               subtitle="Clear communication"

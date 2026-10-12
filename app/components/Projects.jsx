@@ -46,7 +46,7 @@ function ExternalIcon() {
 function ProjectCard({ project }) {
   const accent = ACCENTS[project.accent] || ACCENTS.violet;
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-ink/5 bg-cream shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-violet-100">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-ink/5 bg-cream shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-violet-100 dark:hover:shadow-black/50">
       <div className={`h-2.5 bg-gradient-to-r ${accent.bar}`} aria-hidden="true" />
       <div className="flex flex-1 flex-col p-6 sm:p-7">
         <h3 className="text-lg font-extrabold text-ink sm:text-xl">{project.title}</h3>
@@ -77,7 +77,7 @@ function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Open the live demo of ${project.title}`}
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-gradient-to-r from-coral-deep via-violet-deep to-violet-deep px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-violet-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-gradient-to-r from-coral-deep via-violet-deep to-violet-deep px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-violet-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg dark:shadow-violet-500/25"
             >
               <ExternalIcon />
               Live demo
