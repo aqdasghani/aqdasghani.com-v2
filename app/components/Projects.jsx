@@ -88,7 +88,7 @@ function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${project.title} source code on GitHub`}
-            className="inline-flex min-h-[44px] items-center gap-2 self-start rounded-xl bg-ink px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-violet-deep"
+            className="inline-flex min-h-[44px] items-center gap-2 self-start rounded-xl bg-ink px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-violet-deep dark:bg-[#e9e4ff] dark:text-[#241f3d] dark:hover:bg-white"
           >
             <GitHubIcon />
             View on GitHub
@@ -101,7 +101,7 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   return (
-    <Section id="projects" label="Projects" className="bg-white">
+    <Section id="projects" label="Projects" className="bg-white dark:bg-[#171226]">
       <Reveal>
         <SectionHeading
           eyebrow="Projects"

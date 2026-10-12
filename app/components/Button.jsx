@@ -5,7 +5,7 @@ const VARIANTS = {
   instagram:
     "bg-gradient-to-r from-[#cf3a2c] via-[#c026d3] to-[#6d28d9] text-white shadow-lg hover:shadow-xl",
   secondary:
-    "border-2 border-ink/10 bg-white text-ink shadow-sm hover:border-violet/40 hover:shadow-lg",
+    "border-2 border-ink/10 bg-white text-ink shadow-sm hover:border-violet/40 hover:shadow-lg dark:bg-[#1e1830]",
 };
 
 export default function Button({

@@ -25,7 +25,7 @@ export default function Journey() {
   return (
     <section aria-label="Coding journey" className="px-4 pb-20 sm:px-6 sm:pb-28">
       <Reveal>
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-ink p-8 text-center shadow-2xl sm:p-14">
+        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-ink p-8 text-center shadow-2xl sm:p-14 dark:bg-[#0e0a18]">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"

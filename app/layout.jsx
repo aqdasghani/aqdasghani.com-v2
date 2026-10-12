@@ -1,6 +1,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE } from "./data";
+import { ThemeProvider, THEME_INIT_SCRIPT } from "./components/ThemeProvider";
 
 // Body copy relies on the default 400 weight — all three are needed.
 const jakarta = Plus_Jakarta_Sans({
@@ -102,7 +103,11 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
+    <html lang="en" className={`${jakarta.variable} h-full antialiased`} suppressHydrationWarning>
+      {/* theme script below sets the dark class before hydration */}
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <a
           href="#main"
@@ -110,7 +115,7 @@ export default function RootLayout({ children }) {
         >
           Skip to content
         </a>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

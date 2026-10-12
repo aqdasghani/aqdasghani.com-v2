@@ -16,7 +16,7 @@ const STATS = [
 function FloatingBadge({ className, style, title, subtitle }) {
   return (
     <div
-      className={`animate-float absolute rounded-2xl bg-white px-4 py-3 shadow-xl ${className}`}
+      className={`animate-float absolute rounded-2xl bg-white px-4 py-3 shadow-xl dark:bg-[#1e1830] dark:shadow-black/40 ${className}`}
       style={style}
       aria-hidden="true"
     >
@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:gap-14 sm:px-6 lg:grid-cols-2 2xl:max-w-7xl">
         <Reveal>
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-violet/20 bg-white/70 px-4 py-2 text-sm font-bold text-ink shadow-sm backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-violet/20 bg-white/70 px-4 py-2 text-sm font-bold text-ink shadow-sm backdrop-blur dark:bg-[#1e1830]/70">
               <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal opacity-60" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-teal" />
@@ -74,7 +74,7 @@ export default function Hero() {
               </Button>
             </div>
             <div
-              className="mt-10 inline-flex max-w-full flex-wrap items-center gap-x-8 gap-y-4 rounded-2xl border border-white/60 bg-white/70 px-6 py-5 shadow-sm backdrop-blur sm:gap-x-10"
+              className="mt-10 inline-flex max-w-full flex-wrap items-center gap-x-8 gap-y-4 rounded-2xl border border-white/60 bg-white/70 px-6 py-5 shadow-sm backdrop-blur sm:gap-x-10 dark:border-white/10 dark:bg-[#1e1830]/70"
               role="list"
               aria-label="Quick stats"
             >
@@ -106,7 +106,7 @@ export default function Hero() {
               aria-hidden="true"
               className="animate-spin-slow absolute -inset-5 rounded-[3rem] bg-gradient-to-br from-coral via-violet to-amber opacity-70 blur-2xl"
             />
-            <div className="relative overflow-hidden rounded-[2.5rem] border-8 border-white shadow-2xl shadow-violet-200">
+            <div className="relative overflow-hidden rounded-[2.5rem] border-8 border-white shadow-2xl shadow-violet-200 dark:border-[#2a2145] dark:shadow-black/50">
               <Image
                 src={heroPhoto}
                 alt="Portrait of Aqdas Ghani, full-stack developer"

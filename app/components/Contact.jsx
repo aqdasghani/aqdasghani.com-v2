@@ -70,7 +70,7 @@ function ContactCard({ card }) {
 
 export default function Contact() {
   return (
-    <Section id="contact" label="Contact" className="bg-white">
+    <Section id="contact" label="Contact" className="bg-white dark:bg-[#171226]">
       <Reveal>
         <SectionHeading
           eyebrow="Contact"

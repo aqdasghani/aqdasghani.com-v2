@@ -35,7 +35,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-2xl border-2 border-ink/10 bg-white px-5 py-4 text-base text-ink placeholder:text-ink-soft/60 transition-colors focus:border-violet focus:outline-none";
+    "w-full rounded-2xl border-2 border-ink/10 bg-white px-5 py-4 text-base text-ink placeholder:text-ink-soft/60 transition-colors focus:border-violet focus:outline-none dark:bg-[#1e1830]";
 
   return (
     <div>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Class-based dark mode (toggled via the `dark` class on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ---------- Vibrant, positive theme (Tailwind v4) ---------- */
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
@@ -43,12 +46,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Dark palette: Tailwind v4 theme colours are CSS variables, so every
+   utility built on them (bg-cream, text-ink, bg-blush …) adapts automatically.
+   Hardcoded colours (bg-white, bg-ink bands) get explicit dark: variants
+   in the components. */
+.dark {
+  --color-cream: #14101f;          /* deep plum-black page background */
+  --color-ink: #f1edff;            /* near-white headings/body */
+  --color-ink-soft: #a9a3c8;       /* muted lavender-grey body text */
+  --color-blush: #38222e;          /* dark rose tint */
+  --color-lilac: #292145;          /* dark violet tint */
+  --color-honey: #3a2f16;          /* dark amber tint */
+}
+
 body {
   background: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Animated gradient headline text */
@@ -89,6 +106,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  body { transition: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .text-gradient-animated { animation: none; }
   .animate-float, .animate-float-slow, .animate-spin-slow { animation: none !important; }

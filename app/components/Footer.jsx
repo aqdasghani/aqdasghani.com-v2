@@ -6,7 +6,7 @@ const YEAR = 2026;
 
 export default function Footer() {
   return (
-    <footer className="bg-ink py-10 text-center">
+    <footer className="bg-ink py-10 text-center dark:bg-[#0d0a16]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 2xl:max-w-7xl">
         <p className="text-lg font-extrabold text-white">
           Aqdas<span className="text-gradient-animated">.</span>
