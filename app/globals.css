@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* ---------- Vibrant, positive theme (Tailwind v4) ---------- */
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  /* Brand palette */
+  --color-cream: #fff9f3;          /* warm off-white page background */
+  --color-ink: #241f3d;            /* deep indigo-plum for headings/body */
+  --color-ink-soft: #57536e;       /* muted body text (passes AA on cream) */
+  --color-coral: #ff6b5b;
+  --color-coral-deep: #e8443a;
+  --color-violet: #8b5cf6;
+  --color-violet-deep: #7c3aed;
+  --color-amber: #ffb020;
+  --color-teal: #14b8a6;
+  --color-blush: #ffe8e2;          /* soft coral tint for section accents */
+  --color-lilac: #efe7ff;          /* soft violet tint */
+  --color-honey: #fff3d6;          /* soft amber tint */
+
+  /* Motion: GPU-friendly keyframes (transform / opacity only) */
+  --animate-float: float 9s ease-in-out infinite;
+  --animate-float-slow: float 14s ease-in-out infinite;
+  --animate-gradient-pan: gradient-pan 7s linear infinite;
+  --animate-spin-slow: spin-slow 22s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50%      { transform: translate3d(0, -28px, 0) scale(1.06); }
+  }
+  @keyframes spin-slow {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes gradient-pan {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Animated gradient headline text */
+.text-gradient-animated {
+  background: linear-gradient(100deg, #e8443a, #8b5cf6, #f59e0b, #e8443a);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-gradient-pan);
+}
+
+::selection {
+  background: #8b5cf6;
+  color: #fff;
+}
+
+/* Scroll-reveal (driven by the Reveal component's IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visible focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .text-gradient-animated { animation: none; }
+  .animate-float, .animate-float-slow, .animate-spin-slow { animation: none !important; }
+}
